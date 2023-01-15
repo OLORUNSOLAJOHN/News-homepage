@@ -1,0 +1,309 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.52%;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+img,
+svg,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* HAMBURGER MENU*/
+
+/* HELPING CLASS */
+.margin-bottom-help {
+  margin-bottom: 3.5rem;
+}
+
+.container {
+  width: 80%;
+  max-width: 135rem;
+  margin: 5rem auto;
+}
+
+/* @media (max-width: 50em) {
+  .container {
+    width: 80%
+    max-width: 90rem
+    margin: 5rem auto;
+
+  }
+} */
+
+header {
+  position: relattive;
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  transition: 0.3s;
+}
+
+.logo a {
+  display: block;
+}
+
+.logo a img {
+  display: block;
+  width: 100%;
+}
+
+.main-nav-list {
+  display: flex;
+  flex-shrink: 1;
+  list-style: none;
+  color: hsl(236, 13%, 42%);
+  font-size: 2rem;
+
+  z-index: 1;
+  transition: 0.5s;
+}
+
+.main-nav-list li a {
+  line-height: 1;
+  transition: 0.3s;
+}
+
+.main-nav-link {
+  text-decoration: none;
+  margin-left: 2.5rem;
+  cursor: pointer;
+}
+
+.main-nav-link:hover,
+.main-nav-link:focus {
+  color: hsl(5, 85%, 63%);
+}
+
+.hamburger {
+  position: relative;
+  width: 30px;
+  height: 4px;
+  background: #000;
+  border-radius: 10px;
+  cursor: poiter;
+  z-index: 2;
+  transition: 0.3s;
+}
+
+.hamburger:before .hamburger:after {
+  content: "";
+  position: absolute;
+  height: 4px;
+  right: 0;
+  background: #000;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.hamburger:before {
+  top: -10px;
+}
+
+#img-1 {
+  display: block;
+}
+
+#img-2 {
+  display: none;
+}
+
+/* MEDIA QUERY */
+@media (max-width: 50em) {
+  #img-1 {
+    display: none;
+  }
+
+  #img-2 {
+    display: block;
+  }
+}
+
+/* GRID SECTION */
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+/* MEDIA QUERY */
+@media (min-width: 50em) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  .block-img {
+    grid-column: span 2;
+  }
+}
+
+.block-bright {
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: hsl(240, 100%, 5%);
+}
+
+.block-read p {
+  font-size: 1.2rem;
+  color: hsl(236, 13%, 42%);
+  margin-bottom: 4rem;
+  line-height: 1.9rem;
+}
+
+@media (max-width: 50em) {
+  .block-read p {
+    margin-bottom: 1.4rem;
+  }
+}
+
+.button {
+  font-size: 1.1rem;
+  letter-spacing: 0.2rem;
+  color: #fff;
+  background-color: hsl(5, 85%, 63%);
+  border: none;
+  padding: 1rem 2.5rem;
+  cursor: pointer;
+}
+
+@media (max-width: 50em) {
+  .button {
+    margin-bottom: 3rem;
+  }
+}
+
+.button:hover,
+.button:active {
+  background-color: hsl(240, 100%, 5%);
+}
+
+.new {
+  padding: 2.5rem 1.5rem;
+  background-color: hsl(240, 100%, 5%);
+}
+
+/* MEDIA QUERY */
+@media (min-width: 50em) {
+  .new {
+    grid-column: 3/4;
+    grid-row: 1/3;
+  }
+}
+
+h1 {
+  color: hsl(35, 77%, 62%);
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.7rem;
+}
+
+h2 {
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 2.1rem 0 2.1rem;
+}
+
+.new p {
+  margin-bottom: 1.5rem;
+}
+
+.divider {
+  color: #fff;
+  width: 100%;
+}
+
+p {
+  font-size: 1.1rem;
+  color: hsl(233, 8%, 79%);
+}
+
+/* FOOTER SECTION */
+.footer {
+  display: flex;
+  column-gap: 2.5rem;
+  flex-shrink: 1;
+}
+
+/* MEDIA QUERY */
+@media (max-width: 50em) {
+  .footer {
+    flex-direction: column;
+  }
+}
+
+.block-footer {
+  display: flex;
+  column-gap: 1.2rem;
+  flex: 1;
+}
+
+@media (max-width: 50em) {
+  .block-footer {
+    margin-bottom: 2rem;
+  }
+
+  .block-footer:last-child {
+    margin-bottom: 0rem;
+  }
+}
+
+.image-container {
+  width: 100px;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+}
+
+.footer-word {
+  display: flex;
+  flex-direction: column;
+}
+
+.number {
+  font-size: 2rem;
+  color: hsl(233, 8%, 79%);
+  margin-bottom: 1.4rem;
+  font-weight: 700;
+}
+
+.footer-link {
+  color: hsl(240, 100%, 5%);
+  font-size: 1.3rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  text-decoration: none;
+}
+
+.footer-link:hover,
+.footer-link:active {
+  color: hsl(5, 85%, 63%);
+}
+
+.footer-content {
+  color: hsl(236, 13%, 42%);
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.7rem;
+}
